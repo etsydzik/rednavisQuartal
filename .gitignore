@@ -29,7 +29,7 @@ install/
 *.class
 
 # Package Files #
-#*.jar
+*.jar
 *.war
 
 
