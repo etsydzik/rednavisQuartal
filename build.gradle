@@ -1,0 +1,29 @@
+allprojects {
+    buildscript {
+        repositories {
+            jcenter()
+        }
+    }
+}
+
+def rootDir = buildscript.sourceFile.parentFile
+
+apply from: "$rootDir/gradle/idea.gradle"
+
+group 'rednavis'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+subprojects {
+
+    apply from: "$rootDir/gradle/versions.gradle"
+    apply from: "$rootDir/gradle/java.gradle"
+
+    // configure repositories
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+}
