@@ -1,22 +1,14 @@
 buildscript {
-    ext {
-        springBootVersion = "2.0.0.RC1"
-    }
     repositories {
         mavenCentral()
-        //maven { url "https://repo.spring.io/snapshot" }
-        maven { url "https://repo.spring.io/milestone" }
     }
     dependencies {
-        // classpath "net.ltgt.gradle:gradle-apt-plugin:0.14"
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
-
-
 }
 
 plugins {
-    id 'net.ltgt.apt' version '0.10'
+    id "net.ltgt.apt" version "0.15"
 }
 
 apply plugin: 'java'
@@ -25,36 +17,39 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: "net.ltgt.apt"
+apply plugin: "net.ltgt.apt-idea"
 
 repositories {
     mavenCentral()
-    maven { url "https://repo.spring.io/snapshot" }
-    maven { url "https://repo.spring.io/milestone" }
-    flatDir {
-        dirs 'libs'
-    }
 }
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-group = 'com.rednavis'
-version = '0.0.1-SNAPSHOT'
-
+ext {
+    lombokVersion = '1.16.20'
+}
 
 dependencies {
+    compile("javax.inject:javax.inject:1")
     compile project(':rabbitmq-service')
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile('org.springframework.boot:spring-boot-starter-webflux')
-    compile('org.springframework.boot:spring-boot-starter-websocket')
-    compile('org.springframework.boot:spring-boot-starter-logging')
-    compile "org.apache.httpcomponents:httpclient:4.5.3"
-    compile "com.rabbitmq:http-client:2.0.1.RELEASE"
-    compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive:$springBootVersion")
-    compile group: 'org.springframework', name: 'spring-context', version: '5.0.3.RELEASE'
-    compile group: 'org.mongodb', name: 'mongo-java-driver', version: '3.6.3'
-    compile("org.springframework.amqp:spring-rabbit:2.0.3.RELEASE")
-    compileOnly("org.projectlombok:lombok:1.16.20")
-    annotationProcessor("org.projectlombok:lombok:1.16.20")
+
+    compile("org.springframework.boot:spring-boot-starter-web") {
+        exclude module: "spring-boot-starter-tomcat"
+    }
+    compile("org.springframework.boot:spring-boot-starter-jetty")
+//    compile("com.github.javafaker:javafaker:0.12")
+
+//    compile("org.springframework:spring-websocket:5.0.5.RELEASE")
+//    compile("org.springframework:spring-messaging:5.0.5.RELEASE")
+
+    compileOnly("org.projectlombok:lombok:$lombokVersion")
+    annotationProcessor("org.projectlombok:lombok:$lombokVersion")
+
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+
+group 'rednavis'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'

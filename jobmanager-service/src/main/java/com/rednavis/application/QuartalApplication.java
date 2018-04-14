@@ -1,8 +1,10 @@
 package com.rednavis.application;
 
 
+import com.rednavis.application.config.QuartalAppConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Import;
 
 /**
  * Entry point to the application.
@@ -13,6 +15,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * on 4/12/18.
  */
 @SpringBootApplication
+@Import(QuartalAppConfiguration.class)
 public class QuartalApplication {
 
 	public static void main(String[] args) {

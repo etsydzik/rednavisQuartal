@@ -3,7 +3,7 @@
  */
 
 ext {
-    springBootVersion = '1.5.2.RELEASE'
+    springBootVersion = '2.0.1.RELEASE'
     junitVersion = "4.12"
 
     mongoJavaDriverVersion = "3.4.1"

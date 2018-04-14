@@ -1,0 +1,10 @@
+#server:
+#  url:
+#    websocket: ws://localhost:9020/verizon/dm/alerts
+com.rednavis:
+      socket:
+        protocol: http://
+        port: 9010
+        host: localhost
+        apiPath: /api/jobs
+        connectUrl: ${com.rednavis.socket.protocol}${com.rednavis.socket.host}:${com.rednavis.socket.port}${com.rednavis.socket.apiPath}
