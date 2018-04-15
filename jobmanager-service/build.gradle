@@ -38,10 +38,7 @@ dependencies {
         exclude module: "spring-boot-starter-tomcat"
     }
     compile("org.springframework.boot:spring-boot-starter-jetty")
-//    compile("com.github.javafaker:javafaker:0.12")
-
-//    compile("org.springframework:spring-websocket:5.0.5.RELEASE")
-//    compile("org.springframework:spring-messaging:5.0.5.RELEASE")
+    compile("org.springframework:spring-websocket:5.0.5.RELEASE")
 
     compileOnly("org.projectlombok:lombok:$lombokVersion")
     annotationProcessor("org.projectlombok:lombok:$lombokVersion")

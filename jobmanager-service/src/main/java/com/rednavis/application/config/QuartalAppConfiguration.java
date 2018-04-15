@@ -3,7 +3,6 @@ package com.rednavis.application.config;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * Created by Eugene Tsydzik
@@ -11,7 +10,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  */
 @Configuration
 @ComponentScan("com.rednavis.application")
-@EnableScheduling
-@Import(PropertiesConfig.class)
+@Import({PropertiesConfig.class, JobmanagerWebSocketConfig.class})
 public class QuartalAppConfiguration {
 }
