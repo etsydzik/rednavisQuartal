@@ -15,10 +15,7 @@ import com.rednavis.application.rabbit.service.AmqpPropertyService;
 import javax.inject.Inject;
 
 /**
- * Implementation of exception strategy for {@link org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer}
- * which provides required for current service implementation behavior
- *
- * @autor Arthur Kushner
+ * @author Alexander Sokolov
  */
 @Component
 public class CustomExceptionStrategy extends ConditionalRejectingErrorHandler.DefaultExceptionStrategy {

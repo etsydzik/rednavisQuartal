@@ -4,7 +4,7 @@ import com.rednavis.application.rabbit.comunication.ServiceStatus;
 import com.rednavis.application.rabbit.comunication.ServiceStatusInfo;
 
 /**
- * @autor Arthur Kushner, Evgeny Pestrikov
+ * @author Alexander Sokolov
  */
 public class StatusResponse extends ServiceQueueResponse {
 

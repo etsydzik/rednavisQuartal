@@ -4,10 +4,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 /**
- * This class is a parent for for other classes which is used to create response to queue.
- * All responses must contain IP address of current service in payload.
- *
- * @autor Arthur Kushner
+ * @author Alexander Sokolov
  */
 public abstract class ServiceQueueResponse {
 

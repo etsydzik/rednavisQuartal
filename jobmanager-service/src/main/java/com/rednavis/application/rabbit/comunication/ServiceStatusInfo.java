@@ -1,9 +1,7 @@
 package com.rednavis.application.rabbit.comunication;
 
 /**
- * Holder for current service status details
- *
- * @autor Evgeny Pestrikov
+ * @author Alexander Sokolov
  */
 public class ServiceStatusInfo {
 

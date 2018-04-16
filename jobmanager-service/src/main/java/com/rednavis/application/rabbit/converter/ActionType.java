@@ -1,8 +1,7 @@
 package com.rednavis.application.rabbit.converter;
 
 /**
- * Represents request type based on RabbitMq message routing key
- * @author Arthur Kushner
+ * @author Alexander Sokolov
  */
 public enum ActionType {
 

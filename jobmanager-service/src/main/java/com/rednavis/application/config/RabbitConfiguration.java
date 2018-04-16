@@ -27,8 +27,7 @@ import java.util.stream.Collectors;
 
 
 /**
- * @author Arthur Kushner
- * @since 1/20/17
+ * @author Sokolov
  */
 @Configuration
 @EnableRabbit

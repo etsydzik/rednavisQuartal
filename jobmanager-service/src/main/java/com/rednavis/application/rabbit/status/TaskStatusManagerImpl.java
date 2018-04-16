@@ -5,9 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 /**
- * Holds status information on service state and provides functions to cancel current task (optimization or simulation) and rollback transactions
- *
- * @author Evgeny Pestrikov
+ * @author Alexander Sokolov
  */
 public class TaskStatusManagerImpl implements TaskStatusManager{
 

@@ -1,9 +1,7 @@
 package com.rednavis.application.rabbit.comunication.response;
 
 /**
- * This class describes the result of adding new tenant configuration to repository .
- *
- * @autor Arthur Kushner
+ * @autor Sokolov
  */
 @Deprecated
 public class ConfigResponse extends ServiceQueueResponse {

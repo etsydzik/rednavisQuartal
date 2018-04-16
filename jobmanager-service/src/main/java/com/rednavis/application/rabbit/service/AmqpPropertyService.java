@@ -8,8 +8,7 @@ import org.springframework.stereotype.Service;
 import javax.validation.constraints.NotNull;
 
 /**
- * @autor Arthur Kushner
- * @since 2/8/17
+ * @author Alexander Sokolov
  */
 @Service
 public class AmqpPropertyService {

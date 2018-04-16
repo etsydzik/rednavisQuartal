@@ -4,9 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 
 /**
- * It described the status of simulation/optimization request processing
- *
- * @author Arthur Kushner
+ * @author Sokolov
  */
 @JsonInclude(JsonInclude.Include.ALWAYS)
 public class ExecutorResponse extends ServiceQueueResponse {

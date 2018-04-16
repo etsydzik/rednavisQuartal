@@ -10,8 +10,7 @@ import java.net.UnknownHostException;
 import java.util.Objects;
 
 /**
- * @author Arthur Kushner
- * @since 2/4/17
+ * @author Alexander Sokolov
  */
 @Configuration
 @ComponentScan({"com.rednavis"})

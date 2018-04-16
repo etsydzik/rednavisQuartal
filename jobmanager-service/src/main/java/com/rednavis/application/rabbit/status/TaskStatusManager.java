@@ -1,8 +1,7 @@
 package com.rednavis.application.rabbit.status;
 
 /**
- * @author Evgeny Pestrikov
- * @since 5/11/17
+ * @author Alexander Sokolov
  */
 public interface TaskStatusManager {
 

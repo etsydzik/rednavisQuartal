@@ -15,6 +15,9 @@ import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.UUID;
 
+/**
+ * @author Alexander Sokolov
+ */
 @Log4j2
 @EnableRabbit
 @Component
