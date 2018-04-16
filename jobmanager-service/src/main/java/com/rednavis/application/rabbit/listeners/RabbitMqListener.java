@@ -25,7 +25,7 @@ public class RabbitMqListener {
     @Inject
     private RabbitHttppConnector rabbitHttppConnector;
 
-    @RabbitListener(queues = {"logmessages"})
+    @RabbitListener(queues = {"logmessages", "basResponseQueue", "simResponseQueue"})
     public void processQueue1(Message message) {
         mapOfMessages.put(getKey(message.getMessageProperties().getReceivedRoutingKey()),decodeUTF8(message.getBody()));
         log.info("Received from queue: "+message.getMessageProperties().toString() + "  with body"+ decodeUTF8(message.getBody()));

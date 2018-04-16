@@ -40,22 +40,18 @@ public class JobManagerClientService {
     private void pollForUpdate() {
 
         simulationJobs = listAllSimulatedJobs();
-        System.out.println(simulationJobs);
+        log.info(simulationJobs);
 
         baselineJobs = listAllBaselinesJobs();
-        System.out.println(baselineJobs);
+        log.info(baselineJobs);
     }
 
     private SimulationJobs listAllSimulatedJobs() {
-        System.out.println("List all Simulated Jobs API-----------");
-
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject(propertyService.getConnectUrl() + "/simulation/allSimulations/", SimulationJobs.class);
     }
 
     private BaselineJobs listAllBaselinesJobs() {
-        System.out.println("List all Baselines Jobs API-----------");
-
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject(propertyService.getConnectUrl() + "/baseline/allBaselines", BaselineJobs.class);
 
