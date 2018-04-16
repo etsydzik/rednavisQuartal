@@ -42,7 +42,7 @@ dependencies {
 
     compileOnly("org.projectlombok:lombok:$lombokVersion")
     annotationProcessor("org.projectlombok:lombok:$lombokVersion")
-
+    compile("org.springframework.amqp:spring-rabbit:2.0.3.RELEASE")
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 

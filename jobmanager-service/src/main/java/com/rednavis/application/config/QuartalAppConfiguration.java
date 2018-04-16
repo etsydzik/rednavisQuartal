@@ -10,6 +10,6 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @ComponentScan("com.rednavis.application")
-@Import({PropertiesConfig.class, JobmanagerWebSocketConfig.class})
+@Import({PropertiesConfig.class, JobmanagerWebSocketConfig.class, RabbitConfiguration.class})
 public class QuartalAppConfiguration {
 }
