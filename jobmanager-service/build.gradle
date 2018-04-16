@@ -44,6 +44,7 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok:$lombokVersion")
     compile("org.springframework.amqp:spring-rabbit:2.0.3.RELEASE")
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile ('com.rabbitmq:http-client:2.0.1.RELEASE')
 }
 
 group 'rednavis'
