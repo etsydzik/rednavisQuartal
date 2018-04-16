@@ -16,7 +16,7 @@ com.rednavis:
 spring:
   rabbitmq:
     #amqpHost: 192.168.50.142
-    amqpHost: 192.168.50.142
+    amqpHost: localhost
     amqpPort: 5672
 #    connection-timeout: 5000
     amqpUser: nomisadmin
